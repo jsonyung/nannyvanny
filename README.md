@@ -1,16 +1,75 @@
-# nannyvanny
+# Nanny Vanny - Nanny Booking App
 
-A new Flutter project.
+Welcome to Nanny Vanny, a Flutter mobile application designed for booking nanny services. This app provides a seamless experience for users to find and book nannies through a user-friendly interface.
 
-## Getting Started
+## Table of Contents
 
-This project is a starting point for a Flutter application.
+- [Overview](#overview)
+- [User Interface](#user-interface)
+- [API Integration](#api-integration)
+- [BLoC Pattern](#bloc-pattern)
+- [Code Structure and Organization](#code-structure-and-organization)
+- [Screenshots](#screenshots)
+- [Submission](#submission)
 
-A few resources to get you started if this is your first Flutter project:
+## Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The Nanny Vanny app is a Flutter-based mobile application that allows users to book nanny services. It includes essential features such as user authentication, booking management, and profile management.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## User Interface
+
+The app comprises multiple screens, each serving a specific purpose:
+
+1. **Sign In Page:**
+    - Allows users to sign in to their accounts.
+
+2. **Sign Up Page:**
+    - Enables users to create a new account.
+
+3. **Main Page:**
+    - Contains four sections:
+        - **Home:** Displays available services and relevant information.
+        - **Packages:** Lists different service packages available for booking.
+        - **Bookings:** Allows users to manage their bookings.
+        - **Profile:** Lets users view and edit their profile information.
+
+## API Integration
+
+The app integrates with external APIs for functionalities such as:
+
+- User authentication.
+- Fetching service packages and booking details.
+
+## BLoC Pattern
+
+The app uses the BLoC (Business Logic Component) pattern for state management:
+
+- **MainPageBloc:** Manages the state of the Main Page.
+- **BookingsBloc:** Handles the state related to bookings.
+- **PackagesBloc:** Manages the state of service packages.
+- **SignupFormBloc:** Manages the state related to user sign-up forms.
+- **DropdownBloc:** Handles the state for dropdown menus.
+
+## Code Structure and Organization
+
+The codebase follows a clean and maintainable architecture:
+- Utilizes the BLoC pattern for effective state management.
+- Organizes code logically for readability and maintainability.
+
+## Screenshots
+
+<img src="/screenshots/sign_in.jpg" alt="Sign In Page" width="200"/>
+<img src="/screenshots/sign_up.jpg" alt="Sign Up Page" width="200"/>
+<img src="/screenshots/home.jpg" alt="Home Page" width="200"/>
+<img src="/screenshots/packages.jpg" alt="Packages Page" width="200"/>
+<img src="/screenshots/bookings.jpg" alt="Bookings Page" width="200"/>
+<img src="/screenshots/profile.jpg" alt="Profile Page" width="200"/>
+
+## Submission
+
+To run the app locally, follow these instructions:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/nanny_vanny.git
