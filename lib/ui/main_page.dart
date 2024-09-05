@@ -6,6 +6,7 @@ import 'package:nannyvanny/ui/screen/bookings.dart';
 import 'package:nannyvanny/ui/screen/home.dart';
 import 'package:nannyvanny/ui/screen/packages.dart';
 import 'package:nannyvanny/ui/screen/profile.dart';
+import 'package:nannyvanny/ui/signin_page.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../bloc/main_page/main_page_bloc.dart';
@@ -123,12 +124,10 @@ class _MainPageState extends State<MainPage> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).pop(true);
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    '/signIn', // Replace with your sign-in route
-                    (route) => false,
-                  );
+                  Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => SigninPage()),
+                );
                 },
                 child: const Text("Yes"),
               ),

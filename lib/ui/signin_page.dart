@@ -5,10 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nannyvanny/ui/signup_page.dart';
 
 import '../bloc/sign_in_form/sign_in_form_bloc.dart';
 import '../values/app_color.dart';
 import '../widgets/custom_textfield.dart';
+import 'main_page.dart';
 
 class SigninPage extends StatefulWidget {
   const SigninPage({super.key});
@@ -45,7 +47,10 @@ class _SigninPageState extends State<SigninPage> {
   }
 
   void _onSignUpLinkPressed() {
-    Navigator.pushReplacementNamed(context, '/signup');
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SignupPage()),
+    );
   }
 
   Widget _buildCustomTextField({
@@ -84,19 +89,12 @@ class _SigninPageState extends State<SigninPage> {
             child: BlocListener<SignInBloc, SignInState>(
               listener: (context, state) {
                 if (state.status == SignInStatus.success) {
-                  Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainPage()),
+                  );
                 } else if (state.status == SignInStatus.failure) {
                   // Check if a SnackBar is already visible, dismiss it first
-                  ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                  // Show the new SnackBar and set duration so it dismisses automatically
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content:
-                          Text(state.errorMessage ?? 'Authentication Failure'),
-                      duration: const Duration(
-                          seconds: 3), // Auto close after 3 seconds
-                    ),
-                  );
                 }
               },
               child: Column(

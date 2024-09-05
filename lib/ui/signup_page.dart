@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nannyvanny/ui/signin_page.dart';
 
 import '../bloc/dropdown/dropdown_bloc.dart';
 import '../bloc/sign_up_form/sign_up_form_bloc.dart';
@@ -13,6 +14,7 @@ import '../widgets/custom_dropdwon_menu.dart';
 import '../widgets/custom_radio_button.dart';
 import '../widgets/custom_textfield.dart';
 import '../widgets/radio_button_group.dart';
+import 'main_page.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -71,7 +73,10 @@ class _SignupPageState extends State<SignupPage> {
   }
 
   void _onSignInTap() {
-    Navigator.pushReplacementNamed(context, '/signin');
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SigninPage()),
+    );
   }
 
   Future<bool> _showExitConfirmationDialog() async {
@@ -88,7 +93,10 @@ class _SignupPageState extends State<SignupPage> {
                 child: const Text('Cancel'),
               ),
               TextButton(
-                onPressed: () => Navigator.of(context).pop(true),
+                onPressed: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SigninPage()),
+                );},
                 // User pressed Yes
                 child: const Text('Yes'),
               ),
@@ -107,7 +115,10 @@ class _SignupPageState extends State<SignupPage> {
         body: BlocListener<SignupFormBloc, SignupFormState>(
           listener: (context, state) {
             if (state.status == SignupFormStatus.success) {
-              Navigator.pushReplacementNamed(context, '/home');
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => MainPage()),
+              );
             } else if (state.status == SignupFormStatus.failure) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(

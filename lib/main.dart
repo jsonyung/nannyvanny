@@ -58,13 +58,7 @@ class MyApp extends StatelessWidget {
             cursorColor: AppColors.cursorColor,
           ),
         ),
-        routes: {
-          '/signin': (context) => SigninPage(),
-          '/signup': (context) => SignupPage(),
-          '/home': (context) => MainPage(),
-        },
-        // The first page the app opens on
-        initialRoute: '/signin',
+        home: SigninPage(),
       ),
     );
   }
