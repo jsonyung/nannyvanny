@@ -9,6 +9,7 @@ Welcome to Nanny Vanny, a Flutter mobile application designed for booking nanny 
 - [API Integration](#api-integration)
 - [BLoC Pattern](#bloc-pattern)
 - [Code Structure and Organization](#code-structure-and-organization)
+- [Documentation](#documentation)
 - [Screenshots](#screenshots)
 - [Submission](#submission)
 
@@ -55,6 +56,10 @@ The app uses the BLoC (Business Logic Component) pattern for state management:
 The codebase follows a clean and maintainable architecture:
 - Utilizes the BLoC pattern for effective state management.
 - Organizes code logically for readability and maintainability.
+
+## Documentation
+
+For detailed API documentation, visit the [Documentation](http://htmlpreview.github.io/?https://github.com/jsonyung/nannyvanny/blob/master/doc/api/index.html).
 
 ## Screenshots
 
