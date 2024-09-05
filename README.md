@@ -63,12 +63,13 @@ For detailed API documentation, visit the [Documentation](http://htmlpreview.git
 
 ## Screenshots
 
-<img src="/screenshots/sign_in.jpg" alt="Sign In Page" width="200"/>
-<img src="/screenshots/sign_up.jpg" alt="Sign Up Page" width="200"/>
-<img src="/screenshots/home.jpg" alt="Home Page" width="200"/>
-<img src="/screenshots/packages.jpg" alt="Packages Page" width="200"/>
-<img src="/screenshots/bookings.jpg" alt="Bookings Page" width="200"/>
-<img src="/screenshots/profile.jpg" alt="Profile Page" width="200"/>
+<img src="/screenshots/0.gif" alt="Animated GIF" width="200"/> <img src="/screenshots/1.gif" alt="Animated GIF" width="200"/>
+<img src="/screenshots/2.gif" alt="Animated GIF" width="200"/> <img src="/screenshots/3.jpg" alt="Home Screen" width="200"/>
+<img src="/screenshots/4.jpg" alt="Home Screen" width="200"/> <img src="/screenshots/5.jpg" alt="Home Screen" width="200"/> 
+<img src="/screenshots/6.jpg" alt="Home Screen" width="200"/> <img src="/screenshots/7.jpg" alt="Home Screen" width="200"/>
+<img src="/screenshots/8.jpg" alt="Home Screen" width="200"/> <img src="/screenshots/9.jpg" alt="Home Screen" width="200"/>
+<img src="/screenshots/10.jpg" alt="Home Screen" width="200"/> <img src="/screenshots/11.jpg" alt="Home Screen" width="200"/>
+<img src="/screenshots/12.jpg" alt="Home Screen" width="200"/>
 
 ## Submission
 
